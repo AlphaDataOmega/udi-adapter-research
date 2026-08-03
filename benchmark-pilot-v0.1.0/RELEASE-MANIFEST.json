@@ -1,8 +1,8 @@
 {
   "schema": "ado.udi.protected-pilot-publication-manifest/v1",
   "version": "0.1.0",
-  "status": "FROZEN_PUBLIC_BENCHMARK_RELEASE_CANDIDATE",
-  "publicationAuthorized": false,
+  "status": "PUBLISHED_PUBLIC_BENCHMARK_PILOT",
+  "publicationAuthorized": true,
   "publisher": "James Tuttle aka V — Alpha Data Omega, LLC",
   "publicLabel": "This is a preregistered pilot on an 18-question LongMemEval slice—not a result on the full 500-question benchmark—with arms, seeds, models, and judge settings fixed before protected scoring.",
   "files": [
@@ -18,8 +18,8 @@
     },
     {
       "path": "UDI-TINY-MODEL-PILOT-REPORT.md",
-      "bytes": 8100,
-      "sha256": "1f2f46087d0fb979069b18db06c7994abfeab43b0cd35b6f76c32f135f01ad7b"
+      "bytes": 8098,
+      "sha256": "8dcb06af5020f8574f8ada7791b981d17e97aaa7697c517dff35ce072117c1cc"
     }
   ],
   "excluded": [
