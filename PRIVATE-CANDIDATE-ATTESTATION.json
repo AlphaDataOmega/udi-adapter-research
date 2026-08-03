@@ -1,0 +1,29 @@
+{
+  "claimLimit": "Private deterministic interface behavior only; no LLM performance, safety, unlimited-memory, understanding, consciousness, or production claim.",
+  "codeIncludedInThisRelease": false,
+  "observedDemo": {
+    "finalDisposition": "COMMIT",
+    "initialDisposition": "NULL",
+    "initialNullKind": "open",
+    "initialSpan": 8,
+    "ledgerVerified": true,
+    "nextSpan": 5
+  },
+  "privateTechnicalManifestSha256": "a7733e0cf676314a0a6d4b438a505dc53664e7b48186b7dd89f17ce185ee75b4",
+  "schema": "ado.udi.public-self-attestation/v1",
+  "status": "LOCAL_SELF_ATTESTATION_NO_INDEPENDENT_REPLICATION",
+  "testEnvironment": {
+    "arch": "x64",
+    "node": "v22.18.0",
+    "platform": "win32"
+  },
+  "testResult": {
+    "cancelled": 0,
+    "failed": 0,
+    "passed": 11,
+    "skipped": 0,
+    "tests": 11,
+    "todo": 0
+  },
+  "version": "0.1.0"
+}
