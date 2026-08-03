@@ -1,0 +1,6310 @@
+{
+  "schema": "ado.udi.protected-pilot-aggregate-analysis/v1",
+  "status": "PRIVATE_AGGREGATE_ONLY_EXPLORATORY_ANALYSIS",
+  "publicLabel": "This is a preregistered pilot on a 18-question LongMemEval slice—not a result on the full 500-question benchmark—with arms, seeds, models, and judge settings fixed before protected scoring.",
+  "claimBoundary": "Aggregate-only exploratory pilot analysis. It contains no protected prompts, evidence, gold, item identifiers, hypotheses, judge reasons, or raw model outputs and does not establish benchmark superiority.",
+  "bindings": {
+    "sealedResultFileSha256": "10a144dc4af23520af0aa501458839c8409e6d7acc564e3dd4ddbb0daf2a0e6d",
+    "sealedResultPayloadSha256": "49c0dbd5340ae0caf1a9206aa42c727c42f870c119e7b1b7d0dd042b66dc6b69",
+    "officialJudgeFileSha256": "62cf82a8a9fe83988aeee3ec07361ace5da2ef83209f42dc1f934055ac5444bb",
+    "officialJudgePayloadSha256": "e9dff0cf571bd50fbf600002eb78e51186a39aa7c3181a38562195f55aca30d5",
+    "syntheticLabelsFileSha256": "8be6335cf013388120abb46d6281214621c9ff0133371d9a0ca74d0e29207828",
+    "finalLockFileSha256": "46cd88987022d0fa5570eec957950e2250ce2d56846917acdcefe379fbe76d60",
+    "protectedInputsFileSha256": "4548cbd99efc9935015a946f4521ef5809c7c482851faeaf6450567da07dcce5",
+    "protectedInputsPayloadSha256": "3c8388baf94998803dd9633e57e40854a97f3c0654f9c9760117607122352197",
+    "protectedInferenceOwnerApprovalFileSha256": "039d17f7fd8912926d0ae9da332a6ff10a06264976797d381747db9a658d0af7",
+    "protectedPlanSha256": "a670ce227edc68b5273a226d372ddc2ec6cd0412b74efe8db59ba70feeb9fea2",
+    "paidJudgeOwnerApprovalJsonSha256": "c1e80e01bcbdaf1f0bfea5e2a6909ce5ce21edbdcfea496d85cbd4b80364e6bd",
+    "paidJudgePreflightPlanSha256": "4cf3715e523793e994aec6bfbfa0338eeca5102e110c6b9e8cbf1153a10ba0ec",
+    "hypothesisArtifactSha256": "f548779e70a735663f81d87fe81660d7cc7d9476b54bceb31b923ffebf7dfad8",
+    "officialGoldArtifactSha256": "8ed635e1108498f05879e7b788e81111e087df4752f9c11b51de582cc787f7a7"
+  },
+  "design": {
+    "protectedItemCount": 36,
+    "longMemEvalItemCount": 18,
+    "syntheticItemCount": 18,
+    "assignedTrialCount": 1512,
+    "arms": [
+      "A",
+      "B",
+      "C",
+      "C-alt",
+      "D",
+      "D-shuffle",
+      "E"
+    ],
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "models": [
+      "smollm2:360m",
+      "qwen3:0.6b"
+    ]
+  },
+  "judgeAccounting": {
+    "assigned": 756,
+    "cacheHits": 662,
+    "transportCalls": 94
+  },
+  "aggregateMetrics": [
+    {
+      "model": "smollm2:360m",
+      "arm": "A",
+      "metrics": {
+        "assignedTrials": 108,
+        "longMemEval": {
+          "assigned": 54,
+          "correct": 2,
+          "officialJudgeAccuracy": 0.037037037037037035,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 9,
+              "correct": 2,
+              "accuracy": 0.2222222222222222
+            },
+            "temporal-reasoning": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 54,
+          "correct": 22,
+          "accuracy": 0.4074074074074074,
+          "dispositionMacroAccuracy": 0.40740740740740744,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 18,
+              "correct": 9,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 18,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "NULL": {
+              "assigned": 18,
+              "correct": 13,
+              "accuracy": 0.7222222222222222
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 16,
+          "allTrials": 108,
+          "rateAllTrials": 0.14814814814814814,
+          "commits": 27,
+          "rateAmongCommits": 0.5925925925925926
+        },
+        "execution": {
+          "logicalModelCalls": 108,
+          "physicalModelCalls": 65,
+          "transportAttempts": 65,
+          "retries": 0,
+          "cacheHits": 43,
+          "preModelOutcomes": 0,
+          "schemaEligible": 108,
+          "validSchemas": 105,
+          "validSchemaRate": 0.9722222222222222,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "B",
+      "metrics": {
+        "assignedTrials": 108,
+        "longMemEval": {
+          "assigned": 54,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 54,
+          "correct": 22,
+          "accuracy": 0.4074074074074074,
+          "dispositionMacroAccuracy": 0.40740740740740744,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 18,
+              "correct": 9,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 18,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "NULL": {
+              "assigned": 18,
+              "correct": 13,
+              "accuracy": 0.7222222222222222
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 21,
+          "allTrials": 108,
+          "rateAllTrials": 0.19444444444444445,
+          "commits": 30,
+          "rateAmongCommits": 0.7
+        },
+        "execution": {
+          "logicalModelCalls": 108,
+          "physicalModelCalls": 25,
+          "transportAttempts": 25,
+          "retries": 0,
+          "cacheHits": 83,
+          "preModelOutcomes": 0,
+          "schemaEligible": 108,
+          "validSchemas": 106,
+          "validSchemaRate": 0.9814814814814815,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "C",
+      "metrics": {
+        "assignedTrials": 108,
+        "longMemEval": {
+          "assigned": 54,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 54,
+          "correct": 37,
+          "accuracy": 0.6851851851851852,
+          "dispositionMacroAccuracy": 0.6851851851851852,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 18,
+              "correct": 9,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 18,
+              "correct": 13,
+              "accuracy": 0.7222222222222222
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 17,
+          "allTrials": 108,
+          "rateAllTrials": 0.1574074074074074,
+          "commits": 26,
+          "rateAmongCommits": 0.6538461538461539
+        },
+        "execution": {
+          "logicalModelCalls": 93,
+          "physicalModelCalls": 30,
+          "transportAttempts": 30,
+          "retries": 0,
+          "cacheHits": 63,
+          "preModelOutcomes": 15,
+          "schemaEligible": 93,
+          "validSchemas": 91,
+          "validSchemaRate": 0.978494623655914,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "C-alt",
+      "metrics": {
+        "assignedTrials": 108,
+        "longMemEval": {
+          "assigned": 54,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 54,
+          "correct": 37,
+          "accuracy": 0.6851851851851852,
+          "dispositionMacroAccuracy": 0.6851851851851852,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 18,
+              "correct": 9,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 18,
+              "correct": 13,
+              "accuracy": 0.7222222222222222
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 17,
+          "allTrials": 108,
+          "rateAllTrials": 0.1574074074074074,
+          "commits": 26,
+          "rateAmongCommits": 0.6538461538461539
+        },
+        "execution": {
+          "logicalModelCalls": 93,
+          "physicalModelCalls": 25,
+          "transportAttempts": 25,
+          "retries": 0,
+          "cacheHits": 68,
+          "preModelOutcomes": 15,
+          "schemaEligible": 93,
+          "validSchemas": 91,
+          "validSchemaRate": 0.978494623655914,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "D",
+      "metrics": {
+        "assignedTrials": 108,
+        "longMemEval": {
+          "assigned": 54,
+          "correct": 1,
+          "officialJudgeAccuracy": 0.018518518518518517,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 9,
+              "correct": 1,
+              "accuracy": 0.1111111111111111
+            },
+            "multi-session": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 54,
+          "correct": 37,
+          "accuracy": 0.6851851851851852,
+          "dispositionMacroAccuracy": 0.6851851851851852,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 18,
+              "correct": 9,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 18,
+              "correct": 13,
+              "accuracy": 0.7222222222222222
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 16,
+          "allTrials": 108,
+          "rateAllTrials": 0.14814814814814814,
+          "commits": 26,
+          "rateAmongCommits": 0.6153846153846154
+        },
+        "execution": {
+          "logicalModelCalls": 93,
+          "physicalModelCalls": 28,
+          "transportAttempts": 28,
+          "retries": 0,
+          "cacheHits": 65,
+          "preModelOutcomes": 15,
+          "schemaEligible": 93,
+          "validSchemas": 93,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "D-shuffle",
+      "metrics": {
+        "assignedTrials": 108,
+        "longMemEval": {
+          "assigned": 54,
+          "correct": 3,
+          "officialJudgeAccuracy": 0.05555555555555555,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 9,
+              "correct": 3,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 54,
+          "correct": 37,
+          "accuracy": 0.6851851851851852,
+          "dispositionMacroAccuracy": 0.6851851851851852,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 18,
+              "correct": 9,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 18,
+              "correct": 13,
+              "accuracy": 0.7222222222222222
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 10,
+          "allTrials": 108,
+          "rateAllTrials": 0.09259259259259259,
+          "commits": 22,
+          "rateAmongCommits": 0.45454545454545453
+        },
+        "execution": {
+          "logicalModelCalls": 93,
+          "physicalModelCalls": 63,
+          "transportAttempts": 63,
+          "retries": 0,
+          "cacheHits": 30,
+          "preModelOutcomes": 15,
+          "schemaEligible": 93,
+          "validSchemas": 91,
+          "validSchemaRate": 0.978494623655914,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "E",
+      "metrics": {
+        "assignedTrials": 108,
+        "longMemEval": {
+          "assigned": 54,
+          "correct": 1,
+          "officialJudgeAccuracy": 0.018518518518518517,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 9,
+              "correct": 1,
+              "accuracy": 0.1111111111111111
+            },
+            "multi-session": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 54,
+          "correct": 37,
+          "accuracy": 0.6851851851851852,
+          "dispositionMacroAccuracy": 0.6851851851851852,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 18,
+              "correct": 9,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 18,
+              "correct": 13,
+              "accuracy": 0.7222222222222222
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 16,
+          "allTrials": 108,
+          "rateAllTrials": 0.14814814814814814,
+          "commits": 26,
+          "rateAmongCommits": 0.6153846153846154
+        },
+        "execution": {
+          "logicalModelCalls": 90,
+          "physicalModelCalls": 31,
+          "transportAttempts": 31,
+          "retries": 0,
+          "cacheHits": 59,
+          "preModelOutcomes": 18,
+          "schemaEligible": 90,
+          "validSchemas": 90,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "A",
+      "metrics": {
+        "assignedTrials": 108,
+        "longMemEval": {
+          "assigned": 54,
+          "correct": 10,
+          "officialJudgeAccuracy": 0.18518518518518517,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 9,
+              "correct": 2,
+              "accuracy": 0.2222222222222222
+            },
+            "multi-session": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 9,
+              "correct": 6,
+              "accuracy": 0.6666666666666666
+            },
+            "single-session-preference": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 9,
+              "correct": 2,
+              "accuracy": 0.2222222222222222
+            },
+            "temporal-reasoning": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 54,
+          "correct": 20,
+          "accuracy": 0.37037037037037035,
+          "dispositionMacroAccuracy": 0.3703703703703704,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 18,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "NULL": {
+              "assigned": 18,
+              "correct": 5,
+              "accuracy": 0.2777777777777778
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 33,
+          "allTrials": 108,
+          "rateAllTrials": 0.3055555555555556,
+          "commits": 58,
+          "rateAmongCommits": 0.5689655172413793
+        },
+        "execution": {
+          "logicalModelCalls": 108,
+          "physicalModelCalls": 65,
+          "transportAttempts": 65,
+          "retries": 0,
+          "cacheHits": 43,
+          "preModelOutcomes": 0,
+          "schemaEligible": 108,
+          "validSchemas": 108,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "B",
+      "metrics": {
+        "assignedTrials": 108,
+        "longMemEval": {
+          "assigned": 54,
+          "correct": 11,
+          "officialJudgeAccuracy": 0.2037037037037037,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 9,
+              "correct": 4,
+              "accuracy": 0.4444444444444444
+            },
+            "single-session-preference": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 9,
+              "correct": 5,
+              "accuracy": 0.5555555555555556
+            },
+            "temporal-reasoning": {
+              "assigned": 9,
+              "correct": 2,
+              "accuracy": 0.2222222222222222
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 54,
+          "correct": 20,
+          "accuracy": 0.37037037037037035,
+          "dispositionMacroAccuracy": 0.3703703703703704,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 18,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "NULL": {
+              "assigned": 18,
+              "correct": 5,
+              "accuracy": 0.2777777777777778
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 36,
+          "allTrials": 108,
+          "rateAllTrials": 0.3333333333333333,
+          "commits": 62,
+          "rateAmongCommits": 0.5806451612903226
+        },
+        "execution": {
+          "logicalModelCalls": 108,
+          "physicalModelCalls": 27,
+          "transportAttempts": 27,
+          "retries": 0,
+          "cacheHits": 81,
+          "preModelOutcomes": 0,
+          "schemaEligible": 108,
+          "validSchemas": 105,
+          "validSchemaRate": 0.9722222222222222,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "C",
+      "metrics": {
+        "assignedTrials": 108,
+        "longMemEval": {
+          "assigned": 54,
+          "correct": 14,
+          "officialJudgeAccuracy": 0.25925925925925924,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 9,
+              "correct": 7,
+              "accuracy": 0.7777777777777778
+            },
+            "single-session-preference": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 9,
+              "correct": 5,
+              "accuracy": 0.5555555555555556
+            },
+            "temporal-reasoning": {
+              "assigned": 9,
+              "correct": 2,
+              "accuracy": 0.2222222222222222
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 54,
+          "correct": 35,
+          "accuracy": 0.6481481481481481,
+          "dispositionMacroAccuracy": 0.6481481481481483,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 18,
+              "correct": 5,
+              "accuracy": 0.2777777777777778
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 26,
+          "allTrials": 108,
+          "rateAllTrials": 0.24074074074074073,
+          "commits": 55,
+          "rateAmongCommits": 0.4727272727272727
+        },
+        "execution": {
+          "logicalModelCalls": 93,
+          "physicalModelCalls": 24,
+          "transportAttempts": 24,
+          "retries": 0,
+          "cacheHits": 69,
+          "preModelOutcomes": 15,
+          "schemaEligible": 93,
+          "validSchemas": 90,
+          "validSchemaRate": 0.967741935483871,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "C-alt",
+      "metrics": {
+        "assignedTrials": 108,
+        "longMemEval": {
+          "assigned": 54,
+          "correct": 14,
+          "officialJudgeAccuracy": 0.25925925925925924,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 9,
+              "correct": 7,
+              "accuracy": 0.7777777777777778
+            },
+            "single-session-preference": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 9,
+              "correct": 5,
+              "accuracy": 0.5555555555555556
+            },
+            "temporal-reasoning": {
+              "assigned": 9,
+              "correct": 2,
+              "accuracy": 0.2222222222222222
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 54,
+          "correct": 35,
+          "accuracy": 0.6481481481481481,
+          "dispositionMacroAccuracy": 0.6481481481481483,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 18,
+              "correct": 5,
+              "accuracy": 0.2777777777777778
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 26,
+          "allTrials": 108,
+          "rateAllTrials": 0.24074074074074073,
+          "commits": 55,
+          "rateAmongCommits": 0.4727272727272727
+        },
+        "execution": {
+          "logicalModelCalls": 93,
+          "physicalModelCalls": 21,
+          "transportAttempts": 21,
+          "retries": 0,
+          "cacheHits": 72,
+          "preModelOutcomes": 15,
+          "schemaEligible": 93,
+          "validSchemas": 90,
+          "validSchemaRate": 0.967741935483871,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "D",
+      "metrics": {
+        "assignedTrials": 108,
+        "longMemEval": {
+          "assigned": 54,
+          "correct": 6,
+          "officialJudgeAccuracy": 0.1111111111111111,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 9,
+              "correct": 3,
+              "accuracy": 0.3333333333333333
+            },
+            "single-session-preference": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 9,
+              "correct": 3,
+              "accuracy": 0.3333333333333333
+            },
+            "temporal-reasoning": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 54,
+          "correct": 35,
+          "accuracy": 0.6481481481481481,
+          "dispositionMacroAccuracy": 0.6481481481481483,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 18,
+              "correct": 5,
+              "accuracy": 0.2777777777777778
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 36,
+          "allTrials": 108,
+          "rateAllTrials": 0.3333333333333333,
+          "commits": 57,
+          "rateAmongCommits": 0.631578947368421
+        },
+        "execution": {
+          "logicalModelCalls": 93,
+          "physicalModelCalls": 36,
+          "transportAttempts": 36,
+          "retries": 0,
+          "cacheHits": 57,
+          "preModelOutcomes": 15,
+          "schemaEligible": 93,
+          "validSchemas": 92,
+          "validSchemaRate": 0.989247311827957,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "D-shuffle",
+      "metrics": {
+        "assignedTrials": 108,
+        "longMemEval": {
+          "assigned": 54,
+          "correct": 6,
+          "officialJudgeAccuracy": 0.1111111111111111,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 9,
+              "correct": 6,
+              "accuracy": 0.6666666666666666
+            },
+            "single-session-preference": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 54,
+          "correct": 35,
+          "accuracy": 0.6481481481481481,
+          "dispositionMacroAccuracy": 0.6481481481481483,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 18,
+              "correct": 5,
+              "accuracy": 0.2777777777777778
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 30,
+          "allTrials": 108,
+          "rateAllTrials": 0.2777777777777778,
+          "commits": 51,
+          "rateAmongCommits": 0.5882352941176471
+        },
+        "execution": {
+          "logicalModelCalls": 93,
+          "physicalModelCalls": 63,
+          "transportAttempts": 63,
+          "retries": 0,
+          "cacheHits": 30,
+          "preModelOutcomes": 15,
+          "schemaEligible": 93,
+          "validSchemas": 93,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "E",
+      "metrics": {
+        "assignedTrials": 108,
+        "longMemEval": {
+          "assigned": 54,
+          "correct": 6,
+          "officialJudgeAccuracy": 0.1111111111111111,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 9,
+              "correct": 3,
+              "accuracy": 0.3333333333333333
+            },
+            "single-session-preference": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 9,
+              "correct": 3,
+              "accuracy": 0.3333333333333333
+            },
+            "temporal-reasoning": {
+              "assigned": 9,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 54,
+          "correct": 35,
+          "accuracy": 0.6481481481481481,
+          "dispositionMacroAccuracy": 0.6481481481481483,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 18,
+              "correct": 15,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 18,
+              "correct": 5,
+              "accuracy": 0.2777777777777778
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 36,
+          "allTrials": 108,
+          "rateAllTrials": 0.3333333333333333,
+          "commits": 57,
+          "rateAmongCommits": 0.631578947368421
+        },
+        "execution": {
+          "logicalModelCalls": 90,
+          "physicalModelCalls": 31,
+          "transportAttempts": 31,
+          "retries": 0,
+          "cacheHits": 59,
+          "preModelOutcomes": 18,
+          "schemaEligible": 90,
+          "validSchemas": 89,
+          "validSchemaRate": 0.9888888888888889,
+          "alteredFrameEligible": 0
+        }
+      }
+    }
+  ],
+  "seedBreakdown": [
+    {
+      "model": "smollm2:360m",
+      "arm": "A",
+      "seed": 101,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 1,
+          "officialJudgeAccuracy": 0.05555555555555555,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 7,
+          "accuracy": 0.3888888888888889,
+          "dispositionMacroAccuracy": 0.38888888888888884,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 4,
+              "accuracy": 0.6666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 6,
+          "allTrials": 36,
+          "rateAllTrials": 0.16666666666666666,
+          "commits": 10,
+          "rateAmongCommits": 0.6
+        },
+        "execution": {
+          "logicalModelCalls": 36,
+          "physicalModelCalls": 22,
+          "transportAttempts": 22,
+          "retries": 0,
+          "cacheHits": 14,
+          "preModelOutcomes": 0,
+          "schemaEligible": 36,
+          "validSchemas": 35,
+          "validSchemaRate": 0.9722222222222222,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "A",
+      "seed": 202,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 8,
+          "accuracy": 0.4444444444444444,
+          "dispositionMacroAccuracy": 0.4444444444444445,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 4,
+          "allTrials": 36,
+          "rateAllTrials": 0.1111111111111111,
+          "commits": 7,
+          "rateAmongCommits": 0.5714285714285714
+        },
+        "execution": {
+          "logicalModelCalls": 36,
+          "physicalModelCalls": 20,
+          "transportAttempts": 20,
+          "retries": 0,
+          "cacheHits": 16,
+          "preModelOutcomes": 0,
+          "schemaEligible": 36,
+          "validSchemas": 35,
+          "validSchemaRate": 0.9722222222222222,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "A",
+      "seed": 303,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 1,
+          "officialJudgeAccuracy": 0.05555555555555555,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 7,
+          "accuracy": 0.3888888888888889,
+          "dispositionMacroAccuracy": 0.38888888888888884,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 4,
+              "accuracy": 0.6666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 6,
+          "allTrials": 36,
+          "rateAllTrials": 0.16666666666666666,
+          "commits": 10,
+          "rateAmongCommits": 0.6
+        },
+        "execution": {
+          "logicalModelCalls": 36,
+          "physicalModelCalls": 23,
+          "transportAttempts": 23,
+          "retries": 0,
+          "cacheHits": 13,
+          "preModelOutcomes": 0,
+          "schemaEligible": 36,
+          "validSchemas": 35,
+          "validSchemaRate": 0.9722222222222222,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "B",
+      "seed": 101,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 7,
+          "accuracy": 0.3888888888888889,
+          "dispositionMacroAccuracy": 0.38888888888888884,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 4,
+              "accuracy": 0.6666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 7,
+          "allTrials": 36,
+          "rateAllTrials": 0.19444444444444445,
+          "commits": 10,
+          "rateAmongCommits": 0.7
+        },
+        "execution": {
+          "logicalModelCalls": 36,
+          "physicalModelCalls": 5,
+          "transportAttempts": 5,
+          "retries": 0,
+          "cacheHits": 31,
+          "preModelOutcomes": 0,
+          "schemaEligible": 36,
+          "validSchemas": 35,
+          "validSchemaRate": 0.9722222222222222,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "B",
+      "seed": 202,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 8,
+          "accuracy": 0.4444444444444444,
+          "dispositionMacroAccuracy": 0.4444444444444445,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 5,
+          "allTrials": 36,
+          "rateAllTrials": 0.1388888888888889,
+          "commits": 8,
+          "rateAmongCommits": 0.625
+        },
+        "execution": {
+          "logicalModelCalls": 36,
+          "physicalModelCalls": 9,
+          "transportAttempts": 9,
+          "retries": 0,
+          "cacheHits": 27,
+          "preModelOutcomes": 0,
+          "schemaEligible": 36,
+          "validSchemas": 36,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "B",
+      "seed": 303,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 7,
+          "accuracy": 0.3888888888888889,
+          "dispositionMacroAccuracy": 0.38888888888888884,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 4,
+              "accuracy": 0.6666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 9,
+          "allTrials": 36,
+          "rateAllTrials": 0.25,
+          "commits": 12,
+          "rateAmongCommits": 0.75
+        },
+        "execution": {
+          "logicalModelCalls": 36,
+          "physicalModelCalls": 11,
+          "transportAttempts": 11,
+          "retries": 0,
+          "cacheHits": 25,
+          "preModelOutcomes": 0,
+          "schemaEligible": 36,
+          "validSchemas": 35,
+          "validSchemaRate": 0.9722222222222222,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "C",
+      "seed": 101,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 4,
+              "accuracy": 0.6666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 5,
+          "allTrials": 36,
+          "rateAllTrials": 0.1388888888888889,
+          "commits": 8,
+          "rateAmongCommits": 0.625
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 13,
+          "transportAttempts": 13,
+          "retries": 0,
+          "cacheHits": 18,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 30,
+          "validSchemaRate": 0.967741935483871,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "C",
+      "seed": 202,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 13,
+          "accuracy": 0.7222222222222222,
+          "dispositionMacroAccuracy": 0.7222222222222223,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 4,
+          "allTrials": 36,
+          "rateAllTrials": 0.1111111111111111,
+          "commits": 7,
+          "rateAmongCommits": 0.5714285714285714
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 7,
+          "transportAttempts": 7,
+          "retries": 0,
+          "cacheHits": 24,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 31,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "C",
+      "seed": 303,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 4,
+              "accuracy": 0.6666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 8,
+          "allTrials": 36,
+          "rateAllTrials": 0.2222222222222222,
+          "commits": 11,
+          "rateAmongCommits": 0.7272727272727273
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 10,
+          "transportAttempts": 10,
+          "retries": 0,
+          "cacheHits": 21,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 30,
+          "validSchemaRate": 0.967741935483871,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "C-alt",
+      "seed": 101,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 4,
+              "accuracy": 0.6666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 5,
+          "allTrials": 36,
+          "rateAllTrials": 0.1388888888888889,
+          "commits": 8,
+          "rateAmongCommits": 0.625
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 10,
+          "transportAttempts": 10,
+          "retries": 0,
+          "cacheHits": 21,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 30,
+          "validSchemaRate": 0.967741935483871,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "C-alt",
+      "seed": 202,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 13,
+          "accuracy": 0.7222222222222222,
+          "dispositionMacroAccuracy": 0.7222222222222223,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 4,
+          "allTrials": 36,
+          "rateAllTrials": 0.1111111111111111,
+          "commits": 7,
+          "rateAmongCommits": 0.5714285714285714
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 9,
+          "transportAttempts": 9,
+          "retries": 0,
+          "cacheHits": 22,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 31,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "C-alt",
+      "seed": 303,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 4,
+              "accuracy": 0.6666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 8,
+          "allTrials": 36,
+          "rateAllTrials": 0.2222222222222222,
+          "commits": 11,
+          "rateAmongCommits": 0.7272727272727273
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 6,
+          "transportAttempts": 6,
+          "retries": 0,
+          "cacheHits": 25,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 30,
+          "validSchemaRate": 0.967741935483871,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "D",
+      "seed": 101,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 4,
+              "accuracy": 0.6666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 7,
+          "allTrials": 36,
+          "rateAllTrials": 0.19444444444444445,
+          "commits": 10,
+          "rateAmongCommits": 0.7
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 9,
+          "transportAttempts": 9,
+          "retries": 0,
+          "cacheHits": 22,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 31,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "D",
+      "seed": 202,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 1,
+          "officialJudgeAccuracy": 0.05555555555555555,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 13,
+          "accuracy": 0.7222222222222222,
+          "dispositionMacroAccuracy": 0.7222222222222223,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 5,
+          "allTrials": 36,
+          "rateAllTrials": 0.1388888888888889,
+          "commits": 9,
+          "rateAmongCommits": 0.5555555555555556
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 10,
+          "transportAttempts": 10,
+          "retries": 0,
+          "cacheHits": 21,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 31,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "D",
+      "seed": 303,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 4,
+              "accuracy": 0.6666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 4,
+          "allTrials": 36,
+          "rateAllTrials": 0.1111111111111111,
+          "commits": 7,
+          "rateAmongCommits": 0.5714285714285714
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 9,
+          "transportAttempts": 9,
+          "retries": 0,
+          "cacheHits": 22,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 31,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "D-shuffle",
+      "seed": 101,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 1,
+          "officialJudgeAccuracy": 0.05555555555555555,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 4,
+              "accuracy": 0.6666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 3,
+          "allTrials": 36,
+          "rateAllTrials": 0.08333333333333333,
+          "commits": 7,
+          "rateAmongCommits": 0.42857142857142855
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 19,
+          "transportAttempts": 19,
+          "retries": 0,
+          "cacheHits": 12,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 31,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "D-shuffle",
+      "seed": 202,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 1,
+          "officialJudgeAccuracy": 0.05555555555555555,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 13,
+          "accuracy": 0.7222222222222222,
+          "dispositionMacroAccuracy": 0.7222222222222223,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 2,
+          "allTrials": 36,
+          "rateAllTrials": 0.05555555555555555,
+          "commits": 6,
+          "rateAmongCommits": 0.3333333333333333
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 23,
+          "transportAttempts": 23,
+          "retries": 0,
+          "cacheHits": 8,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 29,
+          "validSchemaRate": 0.9354838709677419,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "D-shuffle",
+      "seed": 303,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 1,
+          "officialJudgeAccuracy": 0.05555555555555555,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 4,
+              "accuracy": 0.6666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 5,
+          "allTrials": 36,
+          "rateAllTrials": 0.1388888888888889,
+          "commits": 9,
+          "rateAmongCommits": 0.5555555555555556
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 21,
+          "transportAttempts": 21,
+          "retries": 0,
+          "cacheHits": 10,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 31,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "E",
+      "seed": 101,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 4,
+              "accuracy": 0.6666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 7,
+          "allTrials": 36,
+          "rateAllTrials": 0.19444444444444445,
+          "commits": 10,
+          "rateAmongCommits": 0.7
+        },
+        "execution": {
+          "logicalModelCalls": 30,
+          "physicalModelCalls": 11,
+          "transportAttempts": 11,
+          "retries": 0,
+          "cacheHits": 19,
+          "preModelOutcomes": 6,
+          "schemaEligible": 30,
+          "validSchemas": 30,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "E",
+      "seed": 202,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 1,
+          "officialJudgeAccuracy": 0.05555555555555555,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 13,
+          "accuracy": 0.7222222222222222,
+          "dispositionMacroAccuracy": 0.7222222222222223,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 5,
+          "allTrials": 36,
+          "rateAllTrials": 0.1388888888888889,
+          "commits": 9,
+          "rateAmongCommits": 0.5555555555555556
+        },
+        "execution": {
+          "logicalModelCalls": 30,
+          "physicalModelCalls": 11,
+          "transportAttempts": 11,
+          "retries": 0,
+          "cacheHits": 19,
+          "preModelOutcomes": 6,
+          "schemaEligible": 30,
+          "validSchemas": 30,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "arm": "E",
+      "seed": 303,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 0,
+          "officialJudgeAccuracy": 0,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 3,
+              "accuracy": 0.5
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 4,
+              "accuracy": 0.6666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 4,
+          "allTrials": 36,
+          "rateAllTrials": 0.1111111111111111,
+          "commits": 7,
+          "rateAmongCommits": 0.5714285714285714
+        },
+        "execution": {
+          "logicalModelCalls": 30,
+          "physicalModelCalls": 9,
+          "transportAttempts": 9,
+          "retries": 0,
+          "cacheHits": 21,
+          "preModelOutcomes": 6,
+          "schemaEligible": 30,
+          "validSchemas": 30,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "A",
+      "seed": 101,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 3,
+          "officialJudgeAccuracy": 0.16666666666666666,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 2,
+              "accuracy": 0.6666666666666666
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 6,
+          "accuracy": 0.3333333333333333,
+          "dispositionMacroAccuracy": 0.3333333333333333,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 1,
+              "accuracy": 0.16666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 11,
+          "allTrials": 36,
+          "rateAllTrials": 0.3055555555555556,
+          "commits": 19,
+          "rateAmongCommits": 0.5789473684210527
+        },
+        "execution": {
+          "logicalModelCalls": 36,
+          "physicalModelCalls": 22,
+          "transportAttempts": 22,
+          "retries": 0,
+          "cacheHits": 14,
+          "preModelOutcomes": 0,
+          "schemaEligible": 36,
+          "validSchemas": 36,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "A",
+      "seed": 202,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 4,
+          "officialJudgeAccuracy": 0.2222222222222222,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 2,
+              "accuracy": 0.6666666666666666
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 7,
+          "accuracy": 0.3888888888888889,
+          "dispositionMacroAccuracy": 0.3888888888888889,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 2,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 10,
+          "allTrials": 36,
+          "rateAllTrials": 0.2777777777777778,
+          "commits": 19,
+          "rateAmongCommits": 0.5263157894736842
+        },
+        "execution": {
+          "logicalModelCalls": 36,
+          "physicalModelCalls": 22,
+          "transportAttempts": 22,
+          "retries": 0,
+          "cacheHits": 14,
+          "preModelOutcomes": 0,
+          "schemaEligible": 36,
+          "validSchemas": 36,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "A",
+      "seed": 303,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 3,
+          "officialJudgeAccuracy": 0.16666666666666666,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 2,
+              "accuracy": 0.6666666666666666
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 7,
+          "accuracy": 0.3888888888888889,
+          "dispositionMacroAccuracy": 0.3888888888888889,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 2,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 12,
+          "allTrials": 36,
+          "rateAllTrials": 0.3333333333333333,
+          "commits": 20,
+          "rateAmongCommits": 0.6
+        },
+        "execution": {
+          "logicalModelCalls": 36,
+          "physicalModelCalls": 21,
+          "transportAttempts": 21,
+          "retries": 0,
+          "cacheHits": 15,
+          "preModelOutcomes": 0,
+          "schemaEligible": 36,
+          "validSchemas": 36,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "B",
+      "seed": 101,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 4,
+          "officialJudgeAccuracy": 0.2222222222222222,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 2,
+              "accuracy": 0.6666666666666666
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 6,
+          "accuracy": 0.3333333333333333,
+          "dispositionMacroAccuracy": 0.3333333333333333,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 1,
+              "accuracy": 0.16666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 11,
+          "allTrials": 36,
+          "rateAllTrials": 0.3055555555555556,
+          "commits": 20,
+          "rateAmongCommits": 0.55
+        },
+        "execution": {
+          "logicalModelCalls": 36,
+          "physicalModelCalls": 10,
+          "transportAttempts": 10,
+          "retries": 0,
+          "cacheHits": 26,
+          "preModelOutcomes": 0,
+          "schemaEligible": 36,
+          "validSchemas": 35,
+          "validSchemaRate": 0.9722222222222222,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "B",
+      "seed": 202,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 3,
+          "officialJudgeAccuracy": 0.16666666666666666,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 2,
+              "accuracy": 0.6666666666666666
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 7,
+          "accuracy": 0.3888888888888889,
+          "dispositionMacroAccuracy": 0.3888888888888889,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 2,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 11,
+          "allTrials": 36,
+          "rateAllTrials": 0.3055555555555556,
+          "commits": 19,
+          "rateAmongCommits": 0.5789473684210527
+        },
+        "execution": {
+          "logicalModelCalls": 36,
+          "physicalModelCalls": 7,
+          "transportAttempts": 7,
+          "retries": 0,
+          "cacheHits": 29,
+          "preModelOutcomes": 0,
+          "schemaEligible": 36,
+          "validSchemas": 35,
+          "validSchemaRate": 0.9722222222222222,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "B",
+      "seed": 303,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 4,
+          "officialJudgeAccuracy": 0.2222222222222222,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 2,
+              "accuracy": 0.6666666666666666
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 7,
+          "accuracy": 0.3888888888888889,
+          "dispositionMacroAccuracy": 0.3888888888888889,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 2,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 14,
+          "allTrials": 36,
+          "rateAllTrials": 0.3888888888888889,
+          "commits": 23,
+          "rateAmongCommits": 0.6086956521739131
+        },
+        "execution": {
+          "logicalModelCalls": 36,
+          "physicalModelCalls": 10,
+          "transportAttempts": 10,
+          "retries": 0,
+          "cacheHits": 26,
+          "preModelOutcomes": 0,
+          "schemaEligible": 36,
+          "validSchemas": 35,
+          "validSchemaRate": 0.9722222222222222,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "C",
+      "seed": 101,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 5,
+          "officialJudgeAccuracy": 0.2777777777777778,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 2,
+              "accuracy": 0.6666666666666666
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 2,
+              "accuracy": 0.6666666666666666
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 11,
+          "accuracy": 0.6111111111111112,
+          "dispositionMacroAccuracy": 0.6111111111111112,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 1,
+              "accuracy": 0.16666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 8,
+          "allTrials": 36,
+          "rateAllTrials": 0.2222222222222222,
+          "commits": 18,
+          "rateAmongCommits": 0.4444444444444444
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 7,
+          "transportAttempts": 7,
+          "retries": 0,
+          "cacheHits": 24,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 30,
+          "validSchemaRate": 0.967741935483871,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "C",
+      "seed": 202,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 4,
+          "officialJudgeAccuracy": 0.2222222222222222,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 2,
+              "accuracy": 0.6666666666666666
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 2,
+              "accuracy": 0.6666666666666666
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 2,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 8,
+          "allTrials": 36,
+          "rateAllTrials": 0.2222222222222222,
+          "commits": 17,
+          "rateAmongCommits": 0.47058823529411764
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 10,
+          "transportAttempts": 10,
+          "retries": 0,
+          "cacheHits": 21,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 30,
+          "validSchemaRate": 0.967741935483871,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "C",
+      "seed": 303,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 5,
+          "officialJudgeAccuracy": 0.2777777777777778,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 3,
+              "accuracy": 1
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 2,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 10,
+          "allTrials": 36,
+          "rateAllTrials": 0.2777777777777778,
+          "commits": 20,
+          "rateAmongCommits": 0.5
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 7,
+          "transportAttempts": 7,
+          "retries": 0,
+          "cacheHits": 24,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 30,
+          "validSchemaRate": 0.967741935483871,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "C-alt",
+      "seed": 101,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 5,
+          "officialJudgeAccuracy": 0.2777777777777778,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 2,
+              "accuracy": 0.6666666666666666
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 2,
+              "accuracy": 0.6666666666666666
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 11,
+          "accuracy": 0.6111111111111112,
+          "dispositionMacroAccuracy": 0.6111111111111112,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 1,
+              "accuracy": 0.16666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 8,
+          "allTrials": 36,
+          "rateAllTrials": 0.2222222222222222,
+          "commits": 18,
+          "rateAmongCommits": 0.4444444444444444
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 6,
+          "transportAttempts": 6,
+          "retries": 0,
+          "cacheHits": 25,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 30,
+          "validSchemaRate": 0.967741935483871,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "C-alt",
+      "seed": 202,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 4,
+          "officialJudgeAccuracy": 0.2222222222222222,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 2,
+              "accuracy": 0.6666666666666666
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 2,
+              "accuracy": 0.6666666666666666
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 2,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 8,
+          "allTrials": 36,
+          "rateAllTrials": 0.2222222222222222,
+          "commits": 17,
+          "rateAmongCommits": 0.47058823529411764
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 6,
+          "transportAttempts": 6,
+          "retries": 0,
+          "cacheHits": 25,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 30,
+          "validSchemaRate": 0.967741935483871,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "C-alt",
+      "seed": 303,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 5,
+          "officialJudgeAccuracy": 0.2777777777777778,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 3,
+              "accuracy": 1
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 2,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 10,
+          "allTrials": 36,
+          "rateAllTrials": 0.2777777777777778,
+          "commits": 20,
+          "rateAmongCommits": 0.5
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 9,
+          "transportAttempts": 9,
+          "retries": 0,
+          "cacheHits": 22,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 30,
+          "validSchemaRate": 0.967741935483871,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "D",
+      "seed": 101,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 2,
+          "officialJudgeAccuracy": 0.1111111111111111,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 11,
+          "accuracy": 0.6111111111111112,
+          "dispositionMacroAccuracy": 0.6111111111111112,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 1,
+              "accuracy": 0.16666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 12,
+          "allTrials": 36,
+          "rateAllTrials": 0.3333333333333333,
+          "commits": 19,
+          "rateAmongCommits": 0.631578947368421
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 10,
+          "transportAttempts": 10,
+          "retries": 0,
+          "cacheHits": 21,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 30,
+          "validSchemaRate": 0.967741935483871,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "D",
+      "seed": 202,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 2,
+          "officialJudgeAccuracy": 0.1111111111111111,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 2,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 11,
+          "allTrials": 36,
+          "rateAllTrials": 0.3055555555555556,
+          "commits": 18,
+          "rateAmongCommits": 0.6111111111111112
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 16,
+          "transportAttempts": 16,
+          "retries": 0,
+          "cacheHits": 15,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 31,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "D",
+      "seed": 303,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 2,
+          "officialJudgeAccuracy": 0.1111111111111111,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 2,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 13,
+          "allTrials": 36,
+          "rateAllTrials": 0.3611111111111111,
+          "commits": 20,
+          "rateAmongCommits": 0.65
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 10,
+          "transportAttempts": 10,
+          "retries": 0,
+          "cacheHits": 21,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 31,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "D-shuffle",
+      "seed": 101,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 3,
+          "officialJudgeAccuracy": 0.16666666666666666,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 3,
+              "accuracy": 1
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 11,
+          "accuracy": 0.6111111111111112,
+          "dispositionMacroAccuracy": 0.6111111111111112,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 1,
+              "accuracy": 0.16666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 9,
+          "allTrials": 36,
+          "rateAllTrials": 0.25,
+          "commits": 17,
+          "rateAmongCommits": 0.5294117647058824
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 21,
+          "transportAttempts": 21,
+          "retries": 0,
+          "cacheHits": 10,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 31,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "D-shuffle",
+      "seed": 202,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 1,
+          "officialJudgeAccuracy": 0.05555555555555555,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 2,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 12,
+          "allTrials": 36,
+          "rateAllTrials": 0.3333333333333333,
+          "commits": 18,
+          "rateAmongCommits": 0.6666666666666666
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 21,
+          "transportAttempts": 21,
+          "retries": 0,
+          "cacheHits": 10,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 31,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "D-shuffle",
+      "seed": 303,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 2,
+          "officialJudgeAccuracy": 0.1111111111111111,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 2,
+              "accuracy": 0.6666666666666666
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 2,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 9,
+          "allTrials": 36,
+          "rateAllTrials": 0.25,
+          "commits": 16,
+          "rateAmongCommits": 0.5625
+        },
+        "execution": {
+          "logicalModelCalls": 31,
+          "physicalModelCalls": 21,
+          "transportAttempts": 21,
+          "retries": 0,
+          "cacheHits": 10,
+          "preModelOutcomes": 5,
+          "schemaEligible": 31,
+          "validSchemas": 31,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "E",
+      "seed": 101,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 2,
+          "officialJudgeAccuracy": 0.1111111111111111,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 11,
+          "accuracy": 0.6111111111111112,
+          "dispositionMacroAccuracy": 0.6111111111111112,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 1,
+              "accuracy": 0.16666666666666666
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 12,
+          "allTrials": 36,
+          "rateAllTrials": 0.3333333333333333,
+          "commits": 19,
+          "rateAmongCommits": 0.631578947368421
+        },
+        "execution": {
+          "logicalModelCalls": 30,
+          "physicalModelCalls": 13,
+          "transportAttempts": 13,
+          "retries": 0,
+          "cacheHits": 17,
+          "preModelOutcomes": 6,
+          "schemaEligible": 30,
+          "validSchemas": 29,
+          "validSchemaRate": 0.9666666666666667,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "E",
+      "seed": 202,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 2,
+          "officialJudgeAccuracy": 0.1111111111111111,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 2,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 11,
+          "allTrials": 36,
+          "rateAllTrials": 0.3055555555555556,
+          "commits": 18,
+          "rateAmongCommits": 0.6111111111111112
+        },
+        "execution": {
+          "logicalModelCalls": 30,
+          "physicalModelCalls": 7,
+          "transportAttempts": 7,
+          "retries": 0,
+          "cacheHits": 23,
+          "preModelOutcomes": 6,
+          "schemaEligible": 30,
+          "validSchemas": 30,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "E",
+      "seed": 303,
+      "metrics": {
+        "assignedTrials": 36,
+        "longMemEval": {
+          "assigned": 18,
+          "correct": 2,
+          "officialJudgeAccuracy": 0.1111111111111111,
+          "byTaskType": {
+            "knowledge-update": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "multi-session": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-assistant": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "single-session-preference": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            },
+            "single-session-user": {
+              "assigned": 3,
+              "correct": 1,
+              "accuracy": 0.3333333333333333
+            },
+            "temporal-reasoning": {
+              "assigned": 3,
+              "correct": 0,
+              "accuracy": 0
+            }
+          }
+        },
+        "synthetic": {
+          "assigned": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666,
+          "dispositionMacroAccuracy": 0.6666666666666666,
+          "byExpectedDisposition": {
+            "COMMIT": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "REFUSE": {
+              "assigned": 6,
+              "correct": 5,
+              "accuracy": 0.8333333333333334
+            },
+            "NULL": {
+              "assigned": 6,
+              "correct": 2,
+              "accuracy": 0.3333333333333333
+            }
+          }
+        },
+        "unsupportedCommits": {
+          "count": 13,
+          "allTrials": 36,
+          "rateAllTrials": 0.3611111111111111,
+          "commits": 20,
+          "rateAmongCommits": 0.65
+        },
+        "execution": {
+          "logicalModelCalls": 30,
+          "physicalModelCalls": 11,
+          "transportAttempts": 11,
+          "retries": 0,
+          "cacheHits": 19,
+          "preModelOutcomes": 6,
+          "schemaEligible": 30,
+          "validSchemas": 30,
+          "validSchemaRate": 1,
+          "alteredFrameEligible": 0
+        }
+      }
+    }
+  ],
+  "pairwiseDeltas": [
+    {
+      "model": "smollm2:360m",
+      "comparison": "B-A",
+      "minuendArm": "B",
+      "subtrahendArm": "A",
+      "status": "ESTIMABLE",
+      "pairedTrialCount": 108,
+      "pairedMinuendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0,
+        "syntheticDispositionMacroAccuracy": 0.40740740740740744,
+        "unsupportedCommitRateAllTrials": 0.19444444444444445,
+        "validSchemaRate": 0.9814814814814815
+      },
+      "pairedSubtrahendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0.037037037037037035,
+        "syntheticDispositionMacroAccuracy": 0.40740740740740744,
+        "unsupportedCommitRateAllTrials": 0.14814814814814814,
+        "validSchemaRate": 0.9722222222222222
+      },
+      "pooledDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": -0.037037037037037035,
+        "syntheticDispositionMacroAccuracy": 0,
+        "unsupportedCommitRateAllTrials": 0.04629629629629631,
+        "validSchemaRate": 0.0092592592592593
+      },
+      "bySeed": [
+        {
+          "seed": 101,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.38888888888888884,
+            "unsupportedCommitRateAllTrials": 0.19444444444444445,
+            "validSchemaRate": 0.9722222222222222
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0.38888888888888884,
+            "unsupportedCommitRateAllTrials": 0.16666666666666666,
+            "validSchemaRate": 0.9722222222222222
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": -0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0.02777777777777779,
+            "validSchemaRate": 0
+          }
+        },
+        {
+          "seed": 202,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.4444444444444445,
+            "unsupportedCommitRateAllTrials": 0.1388888888888889,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.4444444444444445,
+            "unsupportedCommitRateAllTrials": 0.1111111111111111,
+            "validSchemaRate": 0.9722222222222222
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0.02777777777777779,
+            "validSchemaRate": 0.02777777777777779
+          }
+        },
+        {
+          "seed": 303,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.38888888888888884,
+            "unsupportedCommitRateAllTrials": 0.25,
+            "validSchemaRate": 0.9722222222222222
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0.38888888888888884,
+            "unsupportedCommitRateAllTrials": 0.16666666666666666,
+            "validSchemaRate": 0.9722222222222222
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": -0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0.08333333333333334,
+            "validSchemaRate": 0
+          }
+        }
+      ],
+      "seedMeanDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": -0.037037037037037035,
+        "syntheticDispositionMacroAccuracy": 0,
+        "unsupportedCommitRateAllTrials": 0.04629629629629631,
+        "validSchemaRate": 0.009259259259259264
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "comparison": "C-B",
+      "minuendArm": "C",
+      "subtrahendArm": "B",
+      "status": "ESTIMABLE",
+      "pairedTrialCount": 108,
+      "pairedMinuendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0,
+        "syntheticDispositionMacroAccuracy": 0.6851851851851852,
+        "unsupportedCommitRateAllTrials": 0.1574074074074074,
+        "validSchemaRate": 0.978494623655914
+      },
+      "pairedSubtrahendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0,
+        "syntheticDispositionMacroAccuracy": 0.40740740740740744,
+        "unsupportedCommitRateAllTrials": 0.19444444444444445,
+        "validSchemaRate": 0.9814814814814815
+      },
+      "pooledDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": 0,
+        "syntheticDispositionMacroAccuracy": 0.2777777777777778,
+        "unsupportedCommitRateAllTrials": -0.037037037037037035,
+        "validSchemaRate": -0.0029868578255675127
+      },
+      "bySeed": [
+        {
+          "seed": 101,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.1388888888888889,
+            "validSchemaRate": 0.967741935483871
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.38888888888888884,
+            "unsupportedCommitRateAllTrials": 0.19444444444444445,
+            "validSchemaRate": 0.9722222222222222
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.2777777777777778,
+            "unsupportedCommitRateAllTrials": -0.05555555555555555,
+            "validSchemaRate": -0.0044802867383512135
+          }
+        },
+        {
+          "seed": 202,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.7222222222222223,
+            "unsupportedCommitRateAllTrials": 0.1111111111111111,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.4444444444444445,
+            "unsupportedCommitRateAllTrials": 0.1388888888888889,
+            "validSchemaRate": 1
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.27777777777777785,
+            "unsupportedCommitRateAllTrials": -0.02777777777777779,
+            "validSchemaRate": 0
+          }
+        },
+        {
+          "seed": 303,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.2222222222222222,
+            "validSchemaRate": 0.967741935483871
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.38888888888888884,
+            "unsupportedCommitRateAllTrials": 0.25,
+            "validSchemaRate": 0.9722222222222222
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.2777777777777778,
+            "unsupportedCommitRateAllTrials": -0.02777777777777779,
+            "validSchemaRate": -0.0044802867383512135
+          }
+        }
+      ],
+      "seedMeanDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": 0,
+        "syntheticDispositionMacroAccuracy": 0.2777777777777778,
+        "unsupportedCommitRateAllTrials": -0.03703703703703704,
+        "validSchemaRate": -0.002986857825567476
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "comparison": "D-C",
+      "minuendArm": "D",
+      "subtrahendArm": "C",
+      "status": "ESTIMABLE",
+      "pairedTrialCount": 108,
+      "pairedMinuendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0.018518518518518517,
+        "syntheticDispositionMacroAccuracy": 0.6851851851851852,
+        "unsupportedCommitRateAllTrials": 0.14814814814814814,
+        "validSchemaRate": 1
+      },
+      "pairedSubtrahendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0,
+        "syntheticDispositionMacroAccuracy": 0.6851851851851852,
+        "unsupportedCommitRateAllTrials": 0.1574074074074074,
+        "validSchemaRate": 0.978494623655914
+      },
+      "pooledDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": 0.018518518518518517,
+        "syntheticDispositionMacroAccuracy": 0,
+        "unsupportedCommitRateAllTrials": -0.009259259259259273,
+        "validSchemaRate": 0.021505376344086002
+      },
+      "bySeed": [
+        {
+          "seed": 101,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.19444444444444445,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.1388888888888889,
+            "validSchemaRate": 0.967741935483871
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0.05555555555555555,
+            "validSchemaRate": 0.032258064516129004
+          }
+        },
+        {
+          "seed": 202,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0.7222222222222223,
+            "unsupportedCommitRateAllTrials": 0.1388888888888889,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.7222222222222223,
+            "unsupportedCommitRateAllTrials": 0.1111111111111111,
+            "validSchemaRate": 1
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0.02777777777777779,
+            "validSchemaRate": 0
+          }
+        },
+        {
+          "seed": 303,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.1111111111111111,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.2222222222222222,
+            "validSchemaRate": 0.967741935483871
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": -0.1111111111111111,
+            "validSchemaRate": 0.032258064516129004
+          }
+        }
+      ],
+      "seedMeanDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": 0.018518518518518517,
+        "syntheticDispositionMacroAccuracy": 0,
+        "unsupportedCommitRateAllTrials": -0.009259259259259254,
+        "validSchemaRate": 0.021505376344086002
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "comparison": "E-D",
+      "minuendArm": "E",
+      "subtrahendArm": "D",
+      "status": "ESTIMABLE",
+      "pairedTrialCount": 108,
+      "pairedMinuendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0.018518518518518517,
+        "syntheticDispositionMacroAccuracy": 0.6851851851851852,
+        "unsupportedCommitRateAllTrials": 0.14814814814814814,
+        "validSchemaRate": 1
+      },
+      "pairedSubtrahendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0.018518518518518517,
+        "syntheticDispositionMacroAccuracy": 0.6851851851851852,
+        "unsupportedCommitRateAllTrials": 0.14814814814814814,
+        "validSchemaRate": 1
+      },
+      "pooledDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": 0,
+        "syntheticDispositionMacroAccuracy": 0,
+        "unsupportedCommitRateAllTrials": 0,
+        "validSchemaRate": 0
+      },
+      "bySeed": [
+        {
+          "seed": 101,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.19444444444444445,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.19444444444444445,
+            "validSchemaRate": 1
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0,
+            "validSchemaRate": 0
+          }
+        },
+        {
+          "seed": 202,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0.7222222222222223,
+            "unsupportedCommitRateAllTrials": 0.1388888888888889,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0.7222222222222223,
+            "unsupportedCommitRateAllTrials": 0.1388888888888889,
+            "validSchemaRate": 1
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0,
+            "validSchemaRate": 0
+          }
+        },
+        {
+          "seed": 303,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.1111111111111111,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.1111111111111111,
+            "validSchemaRate": 1
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0,
+            "validSchemaRate": 0
+          }
+        }
+      ],
+      "seedMeanDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": 0,
+        "syntheticDispositionMacroAccuracy": 0,
+        "unsupportedCommitRateAllTrials": 0,
+        "validSchemaRate": 0
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "comparison": "C-C-alt",
+      "minuendArm": "C",
+      "subtrahendArm": "C-alt",
+      "status": "NOT_ESTIMABLE",
+      "pairedTrialCount": 0,
+      "pairedMinuendMetrics": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": null,
+        "syntheticDispositionMacroAccuracy": null,
+        "unsupportedCommitRateAllTrials": null,
+        "validSchemaRate": null
+      },
+      "pairedSubtrahendMetrics": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": null,
+        "syntheticDispositionMacroAccuracy": null,
+        "unsupportedCommitRateAllTrials": null,
+        "validSchemaRate": null
+      },
+      "pooledDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": null,
+        "syntheticDispositionMacroAccuracy": null,
+        "unsupportedCommitRateAllTrials": null,
+        "validSchemaRate": null
+      },
+      "bySeed": [
+        {
+          "seed": 101,
+          "status": "NOT_ESTIMABLE",
+          "pairedTrialCount": 0,
+          "minuendMetrics": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          }
+        },
+        {
+          "seed": 202,
+          "status": "NOT_ESTIMABLE",
+          "pairedTrialCount": 0,
+          "minuendMetrics": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          }
+        },
+        {
+          "seed": 303,
+          "status": "NOT_ESTIMABLE",
+          "pairedTrialCount": 0,
+          "minuendMetrics": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          }
+        }
+      ],
+      "seedMeanDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": null,
+        "syntheticDispositionMacroAccuracy": null,
+        "unsupportedCommitRateAllTrials": null,
+        "validSchemaRate": null
+      }
+    },
+    {
+      "model": "smollm2:360m",
+      "comparison": "D-D-shuffle",
+      "minuendArm": "D",
+      "subtrahendArm": "D-shuffle",
+      "status": "ESTIMABLE",
+      "pairedTrialCount": 108,
+      "pairedMinuendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0.018518518518518517,
+        "syntheticDispositionMacroAccuracy": 0.6851851851851852,
+        "unsupportedCommitRateAllTrials": 0.14814814814814814,
+        "validSchemaRate": 1
+      },
+      "pairedSubtrahendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+        "syntheticDispositionMacroAccuracy": 0.6851851851851852,
+        "unsupportedCommitRateAllTrials": 0.09259259259259259,
+        "validSchemaRate": 0.978494623655914
+      },
+      "pooledDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": -0.037037037037037035,
+        "syntheticDispositionMacroAccuracy": 0,
+        "unsupportedCommitRateAllTrials": 0.05555555555555555,
+        "validSchemaRate": 0.021505376344086002
+      },
+      "bySeed": [
+        {
+          "seed": 101,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.19444444444444445,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.08333333333333333,
+            "validSchemaRate": 1
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": -0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0.11111111111111112,
+            "validSchemaRate": 0
+          }
+        },
+        {
+          "seed": 202,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0.7222222222222223,
+            "unsupportedCommitRateAllTrials": 0.1388888888888889,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0.7222222222222223,
+            "unsupportedCommitRateAllTrials": 0.05555555555555555,
+            "validSchemaRate": 0.9354838709677419
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0.08333333333333334,
+            "validSchemaRate": 0.06451612903225812
+          }
+        },
+        {
+          "seed": 303,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.1111111111111111,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.1388888888888889,
+            "validSchemaRate": 1
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": -0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": -0.02777777777777779,
+            "validSchemaRate": 0
+          }
+        }
+      ],
+      "seedMeanDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": -0.037037037037037035,
+        "syntheticDispositionMacroAccuracy": 0,
+        "unsupportedCommitRateAllTrials": 0.05555555555555556,
+        "validSchemaRate": 0.02150537634408604
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "comparison": "B-A",
+      "minuendArm": "B",
+      "subtrahendArm": "A",
+      "status": "ESTIMABLE",
+      "pairedTrialCount": 108,
+      "pairedMinuendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0.2037037037037037,
+        "syntheticDispositionMacroAccuracy": 0.3703703703703704,
+        "unsupportedCommitRateAllTrials": 0.3333333333333333,
+        "validSchemaRate": 0.9722222222222222
+      },
+      "pairedSubtrahendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0.18518518518518517,
+        "syntheticDispositionMacroAccuracy": 0.3703703703703704,
+        "unsupportedCommitRateAllTrials": 0.3055555555555556,
+        "validSchemaRate": 1
+      },
+      "pooledDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": 0.018518518518518517,
+        "syntheticDispositionMacroAccuracy": 0,
+        "unsupportedCommitRateAllTrials": 0.027777777777777735,
+        "validSchemaRate": -0.02777777777777779
+      },
+      "bySeed": [
+        {
+          "seed": 101,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.2222222222222222,
+            "syntheticDispositionMacroAccuracy": 0.3333333333333333,
+            "unsupportedCommitRateAllTrials": 0.3055555555555556,
+            "validSchemaRate": 0.9722222222222222
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.16666666666666666,
+            "syntheticDispositionMacroAccuracy": 0.3333333333333333,
+            "unsupportedCommitRateAllTrials": 0.3055555555555556,
+            "validSchemaRate": 1
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0,
+            "validSchemaRate": -0.02777777777777779
+          }
+        },
+        {
+          "seed": 202,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.16666666666666666,
+            "syntheticDispositionMacroAccuracy": 0.3888888888888889,
+            "unsupportedCommitRateAllTrials": 0.3055555555555556,
+            "validSchemaRate": 0.9722222222222222
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.2222222222222222,
+            "syntheticDispositionMacroAccuracy": 0.3888888888888889,
+            "unsupportedCommitRateAllTrials": 0.2777777777777778,
+            "validSchemaRate": 1
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": -0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0.02777777777777779,
+            "validSchemaRate": -0.02777777777777779
+          }
+        },
+        {
+          "seed": 303,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.2222222222222222,
+            "syntheticDispositionMacroAccuracy": 0.3888888888888889,
+            "unsupportedCommitRateAllTrials": 0.3888888888888889,
+            "validSchemaRate": 0.9722222222222222
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.16666666666666666,
+            "syntheticDispositionMacroAccuracy": 0.3888888888888889,
+            "unsupportedCommitRateAllTrials": 0.3333333333333333,
+            "validSchemaRate": 1
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0.05555555555555558,
+            "validSchemaRate": -0.02777777777777779
+          }
+        }
+      ],
+      "seedMeanDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": 0.018518518518518517,
+        "syntheticDispositionMacroAccuracy": 0,
+        "unsupportedCommitRateAllTrials": 0.02777777777777779,
+        "validSchemaRate": -0.02777777777777779
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "comparison": "C-B",
+      "minuendArm": "C",
+      "subtrahendArm": "B",
+      "status": "ESTIMABLE",
+      "pairedTrialCount": 108,
+      "pairedMinuendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0.25925925925925924,
+        "syntheticDispositionMacroAccuracy": 0.6481481481481483,
+        "unsupportedCommitRateAllTrials": 0.24074074074074073,
+        "validSchemaRate": 0.967741935483871
+      },
+      "pairedSubtrahendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0.2037037037037037,
+        "syntheticDispositionMacroAccuracy": 0.3703703703703704,
+        "unsupportedCommitRateAllTrials": 0.3333333333333333,
+        "validSchemaRate": 0.9722222222222222
+      },
+      "pooledDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+        "syntheticDispositionMacroAccuracy": 0.27777777777777785,
+        "unsupportedCommitRateAllTrials": -0.09259259259259259,
+        "validSchemaRate": -0.0044802867383512135
+      },
+      "bySeed": [
+        {
+          "seed": 101,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.2777777777777778,
+            "syntheticDispositionMacroAccuracy": 0.6111111111111112,
+            "unsupportedCommitRateAllTrials": 0.2222222222222222,
+            "validSchemaRate": 0.967741935483871
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.2222222222222222,
+            "syntheticDispositionMacroAccuracy": 0.3333333333333333,
+            "unsupportedCommitRateAllTrials": 0.3055555555555556,
+            "validSchemaRate": 0.9722222222222222
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555558,
+            "syntheticDispositionMacroAccuracy": 0.27777777777777785,
+            "unsupportedCommitRateAllTrials": -0.08333333333333337,
+            "validSchemaRate": -0.0044802867383512135
+          }
+        },
+        {
+          "seed": 202,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.2222222222222222,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.2222222222222222,
+            "validSchemaRate": 0.967741935483871
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.16666666666666666,
+            "syntheticDispositionMacroAccuracy": 0.3888888888888889,
+            "unsupportedCommitRateAllTrials": 0.3055555555555556,
+            "validSchemaRate": 0.9722222222222222
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0.27777777777777773,
+            "unsupportedCommitRateAllTrials": -0.08333333333333337,
+            "validSchemaRate": -0.0044802867383512135
+          }
+        },
+        {
+          "seed": 303,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.2777777777777778,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.2777777777777778,
+            "validSchemaRate": 0.967741935483871
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.2222222222222222,
+            "syntheticDispositionMacroAccuracy": 0.3888888888888889,
+            "unsupportedCommitRateAllTrials": 0.3888888888888889,
+            "validSchemaRate": 0.9722222222222222
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555558,
+            "syntheticDispositionMacroAccuracy": 0.27777777777777773,
+            "unsupportedCommitRateAllTrials": -0.1111111111111111,
+            "validSchemaRate": -0.0044802867383512135
+          }
+        }
+      ],
+      "seedMeanDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": 0.05555555555555557,
+        "syntheticDispositionMacroAccuracy": 0.27777777777777773,
+        "unsupportedCommitRateAllTrials": -0.09259259259259262,
+        "validSchemaRate": -0.0044802867383512135
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "comparison": "D-C",
+      "minuendArm": "D",
+      "subtrahendArm": "C",
+      "status": "ESTIMABLE",
+      "pairedTrialCount": 108,
+      "pairedMinuendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+        "syntheticDispositionMacroAccuracy": 0.6481481481481483,
+        "unsupportedCommitRateAllTrials": 0.3333333333333333,
+        "validSchemaRate": 0.989247311827957
+      },
+      "pairedSubtrahendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0.25925925925925924,
+        "syntheticDispositionMacroAccuracy": 0.6481481481481483,
+        "unsupportedCommitRateAllTrials": 0.24074074074074073,
+        "validSchemaRate": 0.967741935483871
+      },
+      "pooledDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": -0.14814814814814814,
+        "syntheticDispositionMacroAccuracy": 0,
+        "unsupportedCommitRateAllTrials": 0.09259259259259259,
+        "validSchemaRate": 0.021505376344086002
+      },
+      "bySeed": [
+        {
+          "seed": 101,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+            "syntheticDispositionMacroAccuracy": 0.6111111111111112,
+            "unsupportedCommitRateAllTrials": 0.3333333333333333,
+            "validSchemaRate": 0.967741935483871
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.2777777777777778,
+            "syntheticDispositionMacroAccuracy": 0.6111111111111112,
+            "unsupportedCommitRateAllTrials": 0.2222222222222222,
+            "validSchemaRate": 0.967741935483871
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": -0.16666666666666669,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0.1111111111111111,
+            "validSchemaRate": 0
+          }
+        },
+        {
+          "seed": 202,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.3055555555555556,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.2222222222222222,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.2222222222222222,
+            "validSchemaRate": 0.967741935483871
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": -0.1111111111111111,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0.08333333333333337,
+            "validSchemaRate": 0.032258064516129004
+          }
+        },
+        {
+          "seed": 303,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.3611111111111111,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.2777777777777778,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.2777777777777778,
+            "validSchemaRate": 0.967741935483871
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": -0.16666666666666669,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0.08333333333333331,
+            "validSchemaRate": 0.032258064516129004
+          }
+        }
+      ],
+      "seedMeanDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": -0.14814814814814817,
+        "syntheticDispositionMacroAccuracy": 0,
+        "unsupportedCommitRateAllTrials": 0.0925925925925926,
+        "validSchemaRate": 0.021505376344086002
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "comparison": "E-D",
+      "minuendArm": "E",
+      "subtrahendArm": "D",
+      "status": "ESTIMABLE",
+      "pairedTrialCount": 108,
+      "pairedMinuendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+        "syntheticDispositionMacroAccuracy": 0.6481481481481483,
+        "unsupportedCommitRateAllTrials": 0.3333333333333333,
+        "validSchemaRate": 0.9888888888888889
+      },
+      "pairedSubtrahendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+        "syntheticDispositionMacroAccuracy": 0.6481481481481483,
+        "unsupportedCommitRateAllTrials": 0.3333333333333333,
+        "validSchemaRate": 0.989247311827957
+      },
+      "pooledDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": 0,
+        "syntheticDispositionMacroAccuracy": 0,
+        "unsupportedCommitRateAllTrials": 0,
+        "validSchemaRate": -0.00035842293906807043
+      },
+      "bySeed": [
+        {
+          "seed": 101,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+            "syntheticDispositionMacroAccuracy": 0.6111111111111112,
+            "unsupportedCommitRateAllTrials": 0.3333333333333333,
+            "validSchemaRate": 0.9666666666666667
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+            "syntheticDispositionMacroAccuracy": 0.6111111111111112,
+            "unsupportedCommitRateAllTrials": 0.3333333333333333,
+            "validSchemaRate": 0.967741935483871
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0,
+            "validSchemaRate": -0.0010752688172043223
+          }
+        },
+        {
+          "seed": 202,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.3055555555555556,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.3055555555555556,
+            "validSchemaRate": 1
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0,
+            "validSchemaRate": 0
+          }
+        },
+        {
+          "seed": 303,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.3611111111111111,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.3611111111111111,
+            "validSchemaRate": 1
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0,
+            "validSchemaRate": 0
+          }
+        }
+      ],
+      "seedMeanDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": 0,
+        "syntheticDispositionMacroAccuracy": 0,
+        "unsupportedCommitRateAllTrials": 0,
+        "validSchemaRate": -0.00035842293906810746
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "comparison": "C-C-alt",
+      "minuendArm": "C",
+      "subtrahendArm": "C-alt",
+      "status": "NOT_ESTIMABLE",
+      "pairedTrialCount": 0,
+      "pairedMinuendMetrics": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": null,
+        "syntheticDispositionMacroAccuracy": null,
+        "unsupportedCommitRateAllTrials": null,
+        "validSchemaRate": null
+      },
+      "pairedSubtrahendMetrics": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": null,
+        "syntheticDispositionMacroAccuracy": null,
+        "unsupportedCommitRateAllTrials": null,
+        "validSchemaRate": null
+      },
+      "pooledDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": null,
+        "syntheticDispositionMacroAccuracy": null,
+        "unsupportedCommitRateAllTrials": null,
+        "validSchemaRate": null
+      },
+      "bySeed": [
+        {
+          "seed": 101,
+          "status": "NOT_ESTIMABLE",
+          "pairedTrialCount": 0,
+          "minuendMetrics": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          }
+        },
+        {
+          "seed": 202,
+          "status": "NOT_ESTIMABLE",
+          "pairedTrialCount": 0,
+          "minuendMetrics": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          }
+        },
+        {
+          "seed": 303,
+          "status": "NOT_ESTIMABLE",
+          "pairedTrialCount": 0,
+          "minuendMetrics": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": null,
+            "syntheticDispositionMacroAccuracy": null,
+            "unsupportedCommitRateAllTrials": null,
+            "validSchemaRate": null
+          }
+        }
+      ],
+      "seedMeanDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": null,
+        "syntheticDispositionMacroAccuracy": null,
+        "unsupportedCommitRateAllTrials": null,
+        "validSchemaRate": null
+      }
+    },
+    {
+      "model": "qwen3:0.6b",
+      "comparison": "D-D-shuffle",
+      "minuendArm": "D",
+      "subtrahendArm": "D-shuffle",
+      "status": "ESTIMABLE",
+      "pairedTrialCount": 108,
+      "pairedMinuendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+        "syntheticDispositionMacroAccuracy": 0.6481481481481483,
+        "unsupportedCommitRateAllTrials": 0.3333333333333333,
+        "validSchemaRate": 0.989247311827957
+      },
+      "pairedSubtrahendMetrics": {
+        "assignedTrials": 108,
+        "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+        "syntheticDispositionMacroAccuracy": 0.6481481481481483,
+        "unsupportedCommitRateAllTrials": 0.2777777777777778,
+        "validSchemaRate": 1
+      },
+      "pooledDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": 0,
+        "syntheticDispositionMacroAccuracy": 0,
+        "unsupportedCommitRateAllTrials": 0.055555555555555525,
+        "validSchemaRate": -0.010752688172043001
+      },
+      "bySeed": [
+        {
+          "seed": 101,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+            "syntheticDispositionMacroAccuracy": 0.6111111111111112,
+            "unsupportedCommitRateAllTrials": 0.3333333333333333,
+            "validSchemaRate": 0.967741935483871
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.16666666666666666,
+            "syntheticDispositionMacroAccuracy": 0.6111111111111112,
+            "unsupportedCommitRateAllTrials": 0.25,
+            "validSchemaRate": 1
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": -0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0.08333333333333331,
+            "validSchemaRate": -0.032258064516129004
+          }
+        },
+        {
+          "seed": 202,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.3055555555555556,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.3333333333333333,
+            "validSchemaRate": 1
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0.05555555555555555,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": -0.027777777777777735,
+            "validSchemaRate": 0
+          }
+        },
+        {
+          "seed": 303,
+          "status": "ESTIMABLE",
+          "pairedTrialCount": 36,
+          "minuendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.3611111111111111,
+            "validSchemaRate": 1
+          },
+          "subtrahendMetrics": {
+            "assignedTrials": 36,
+            "longMemEvalOfficialJudgeAccuracy": 0.1111111111111111,
+            "syntheticDispositionMacroAccuracy": 0.6666666666666666,
+            "unsupportedCommitRateAllTrials": 0.25,
+            "validSchemaRate": 1
+          },
+          "delta": {
+            "assignedTrials": 0,
+            "longMemEvalOfficialJudgeAccuracy": 0,
+            "syntheticDispositionMacroAccuracy": 0,
+            "unsupportedCommitRateAllTrials": 0.1111111111111111,
+            "validSchemaRate": 0
+          }
+        }
+      ],
+      "seedMeanDelta": {
+        "assignedTrials": 0,
+        "longMemEvalOfficialJudgeAccuracy": 0,
+        "syntheticDispositionMacroAccuracy": 0,
+        "unsupportedCommitRateAllTrials": 0.05555555555555556,
+        "validSchemaRate": -0.010752688172043001
+      }
+    }
+  ],
+  "integrity": {
+    "payloadSha256": "597681cba0e2f97914ea7bbd92e12468ae0dbb931210c9869fa5c0c95ccdaf9a"
+  }
+}

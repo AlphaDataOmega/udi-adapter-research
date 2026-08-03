@@ -1,0 +1,35 @@
+{
+  "schema": "ado.udi.protected-pilot-publication-manifest/v1",
+  "version": "0.1.0",
+  "status": "FROZEN_PUBLIC_BENCHMARK_RELEASE_CANDIDATE",
+  "publicationAuthorized": false,
+  "publisher": "James Tuttle aka V — Alpha Data Omega, LLC",
+  "publicLabel": "This is a preregistered pilot on an 18-question LongMemEval slice—not a result on the full 500-question benchmark—with arms, seeds, models, and judge settings fixed before protected scoring.",
+  "files": [
+    {
+      "path": "PUBLIC-ATTESTATION.json",
+      "bytes": 5498,
+      "sha256": "c8ba6fdb0ac29f00f5cab8bb1c62fe925c2f35791b9e48552e46740566b04683"
+    },
+    {
+      "path": "PROTECTED-PILOT-AGGREGATE.json",
+      "bytes": 187804,
+      "sha256": "844056a47984519a25061a3bcf9a9dc37b29db6fdee342c2030601fa9a931c00"
+    },
+    {
+      "path": "UDI-TINY-MODEL-PILOT-REPORT.md",
+      "bytes": 8100,
+      "sha256": "1f2f46087d0fb979069b18db06c7994abfeab43b0cd35b6f76c32f135f01ad7b"
+    }
+  ],
+  "excluded": [
+    "protected or per-item data",
+    "raw model or judge outputs",
+    "private prompts and judge reasons",
+    "graph topology and protected geometry",
+    "THV0 identities or live state",
+    "credentials and service addresses",
+    "executable source"
+  ],
+  "claimBoundary": "Aggregate exploratory pilot only. No benchmark superiority, general safety, phi, graph organization, governance, unlimited-memory, understanding, production-readiness, or independent-validation claim."
+}
