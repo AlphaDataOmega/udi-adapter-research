@@ -1,0 +1,120 @@
+{
+  "schema": "ado.udi.protected-pilot-public-self-attestation/v1",
+  "version": "0.1.0",
+  "status": "LOCAL_SELF_ATTESTATION_NO_INDEPENDENT_REPLICATION",
+  "preparedAt": "2026-08-03T21:20:12Z",
+  "publisher": {
+    "name": "James Tuttle aka V",
+    "organization": "Alpha Data Omega, LLC"
+  },
+  "publicLabel": "This is a preregistered pilot on an 18-question LongMemEval slice—not a result on the full 500-question benchmark—with arms, seeds, models, and judge settings fixed before protected scoring.",
+  "study": {
+    "classification": "exploratory-pilot",
+    "protectedItemCount": 36,
+    "longMemEvalUniqueQuestionCount": 18,
+    "syntheticUniqueQuestionCount": 18,
+    "assignedTrialCount": 1512,
+    "arms": [
+      "A",
+      "B",
+      "C",
+      "C-alt",
+      "D",
+      "D-shuffle",
+      "E"
+    ],
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "models": [
+      {
+        "name": "smollm2:360m",
+        "blob": "sha256-7d23be4097d67c5c43c3df62ebc19609a25f483c7d0b77d3989e1d94e36ccab6"
+      },
+      {
+        "name": "qwen3:0.6b",
+        "blob": "sha256-7f4030143c1c477224c5434f8272c662a8b042079a0a584f0a27a1684fe2e1fa"
+      }
+    ],
+    "runtime": "Ollama 0.13.5",
+    "officialJudgeModel": "openai/gpt-4o-2024-08-06",
+    "longMemEvalCommit": "9e0b455f4ef0e2ab8f2e582289761153549043fc"
+  },
+  "bindings": {
+    "finalLockFileSha256": "46cd88987022d0fa5570eec957950e2250ce2d56846917acdcefe379fbe76d60",
+    "finalLockPayloadSha256": "e9e2061b69adf554dec4ccfc58932e68046c9394f2276d809ef82a75054f8f7e",
+    "protectedPlanSha256": "a670ce227edc68b5273a226d372ddc2ec6cd0412b74efe8db59ba70feeb9fea2",
+    "runtimeManifestFileSha256": "3b7d913a990a81af10726a11e8bf0915b4db274a277d68c0c1f3fb9a9970cc47",
+    "sealedResultFileSha256": "10a144dc4af23520af0aa501458839c8409e6d7acc564e3dd4ddbb0daf2a0e6d",
+    "sealedResultPayloadSha256": "49c0dbd5340ae0caf1a9206aa42c727c42f870c119e7b1b7d0dd042b66dc6b69",
+    "officialJudgeFileSha256": "62cf82a8a9fe83988aeee3ec07361ace5da2ef83209f42dc1f934055ac5444bb",
+    "officialJudgePayloadSha256": "e9dff0cf571bd50fbf600002eb78e51186a39aa7c3181a38562195f55aca30d5",
+    "aggregateFileSha256": "844056a47984519a25061a3bcf9a9dc37b29db6fdee342c2030601fa9a931c00",
+    "aggregatePayloadSha256": "597681cba0e2f97914ea7bbd92e12468ae0dbb931210c9869fa5c0c95ccdaf9a",
+    "hypothesisArtifactSha256": "f548779e70a735663f81d87fe81660d7cc7d9476b54bceb31b923ffebf7dfad8",
+    "officialGoldArtifactSha256": "8ed635e1108498f05879e7b788e81111e087df4752f9c11b51de582cc787f7a7"
+  },
+  "externalTimestamp": {
+    "service": "FreeTSA",
+    "generationTimeUtc": "2026-08-03T21:05:22Z",
+    "policy": "tsa_policy1",
+    "serial": "0x06BD47CD",
+    "proofJsonSha256": "bb38a3aec87be7f62876c2862815b355ac0f0e3e7fe7621d7edda9c445b3b31c",
+    "timestampReplySha256": "f0ffa76df51cec4369f537692cb26bb9fa04e8302154ecf973ca1b166dc888d9",
+    "verification": "Verification: OK",
+    "claimBoundary": "The receipt proves the exact final-lock digest existed no later than the timestamp generation time. It does not prove that the benchmark result is correct."
+  },
+  "execution": {
+    "reader": {
+      "logicalModelCalls": 1356,
+      "physicalModelCalls": 534,
+      "cacheHits": 822,
+      "preModelOutcomes": 156,
+      "transportAttempts": 534,
+      "retries": 0,
+      "schemaEligible": 1356,
+      "validSchemas": 1334
+    },
+    "officialJudge": {
+      "assigned": 756,
+      "transportCalls": 94,
+      "cacheHits": 662,
+      "returnedModelIdentityMatched": true
+    }
+  },
+  "resultSummary": {
+    "narrowFinding": "Compared with ordinary BM25 retrieval, the UDI evidence gate improved synthetic disposition accuracy by 27.8 percentage points for both models and reduced unsupported-commit rates in this pilot.",
+    "memoryFinding": "LongMemEval accuracy improved by 5.6 percentage points for Qwen3 0.6B and by 0.0 points for SmolLM2 360M in the same comparison.",
+    "negativeFinding": "The graph step hurt Qwen, shuffled graph content matched or beat the organized graph, and the static THV0-derived policy produced no primary-metric change.",
+    "notEstimable": "The phi-specific C versus C-alt comparison had zero eligible altered-frame trials and is NOT_ESTIMABLE."
+  },
+  "protocolDeviation": {
+    "present": true,
+    "description": "The locked aggregate analyzer did not emit the planned descriptive resampling intervals or several planned secondary failure and latency totals. No post-outcome replacement analysis is presented.",
+    "effect": "No uncertainty, significance, efficacy, or hypothesis-support claim is made."
+  },
+  "claimBoundary": "This local self-attestation supports only the aggregate descriptive pilot record. It does not establish benchmark superiority, full LongMemEval performance, general safety, phi, graph organization, THV0 governance, unlimited memory, understanding, consciousness, production readiness, or independent validation.",
+  "excludedFromRelease": [
+    "protected questions",
+    "item identifiers",
+    "expected answers and labels",
+    "evidence records",
+    "per-item traces",
+    "raw model outputs",
+    "private prompts",
+    "judge reasons",
+    "graph topology",
+    "protected geometry",
+    "THV0 identities and live state",
+    "credentials",
+    "executable source"
+  ],
+  "authorization": {
+    "publication": false,
+    "deployment": false,
+    "outreach": false,
+    "note": "This file is part of a local release candidate. Publication requires separate owner approval."
+  }
+}
