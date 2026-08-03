@@ -1,0 +1,17 @@
+{
+  "files": [
+    {
+      "bytes": 859,
+      "path": "PRIVATE-CANDIDATE-ATTESTATION.json",
+      "sha256": "c1783104b62ea02f8bb721c3f3b64e909aaf9a6c577851139503a00bba5cf94f"
+    },
+    {
+      "bytes": 2479,
+      "path": "UDI-ADAPTER-RESEARCH-NOTE.md",
+      "sha256": "4843ce5520b4294ed6590591b88226c8475e1baf637de958e05ecae7d9900b4b"
+    }
+  ],
+  "schema": "ado.udi.note-publication-manifest/v1",
+  "status": "FROZEN_NOTE_RELEASE_CANDIDATE",
+  "version": "0.1.0"
+}
