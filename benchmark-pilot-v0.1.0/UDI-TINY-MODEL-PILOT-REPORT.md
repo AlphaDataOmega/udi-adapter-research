@@ -1,6 +1,7 @@
 # UDI Tiny-Model Pilot
 
-**Public release candidate — not yet published**  
+**Public release v0.1.0 — published 2026-08-03**
+
 **By:** James Tuttle aka V, Alpha Data Omega, LLC  
 **Prepared:** 2026-08-03  
 **Result:** A narrow safety-control signal, mixed memory results, and useful negative findings
@@ -113,4 +114,3 @@ Protected questions, expected answers, item IDs, evidence, per-item traces, raw 
 - [Pinned LongMemEval evaluator](https://raw.githubusercontent.com/xiaowu0162/LongMemEval/9e0b455f4ef0e2ab8f2e582289761153549043fc/src/evaluation/evaluate_qa.py)
 - [OpenRouter model and pricing record](https://openrouter.ai/openai/gpt-4o-2024-08-06/pricing)
 - [FreeTSA timestamp service](https://freetsa.org/index_en.php)
-
